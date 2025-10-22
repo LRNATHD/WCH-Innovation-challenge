@@ -119,7 +119,20 @@
   },
   "open_jobsets": [],
   "project": {
-    "files": []
+    "files": [
+      {
+        "name": "CH634W6G-PD with shell-R0-1v2.kicad_sch",
+        "open": true,
+        "window": {
+          "display": 0,
+          "maximized": true,
+          "pos_x": -12,
+          "pos_y": -12,
+          "size_x": 2584,
+          "size_y": 1624
+        }
+      }
+    ]
   },
   "schematic": {
     "selection_filter": {
