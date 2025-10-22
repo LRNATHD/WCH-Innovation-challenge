@@ -2004,119 +2004,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+3.3V"
-			(power)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+3.3V"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3.3V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3.3V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(hide yes)
-					(name "+3V3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+5V"
 			(power)
 			(pin_names
@@ -2433,9 +2320,19 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Current limit=Resistor on Flag#/Resistor on ISet\n= 51k/24k\n= 2.125A\nGlobal current limit for the 4 usb A\n"
+	(text "usually the overcurrent (PWRSTOP) pin needs to be pulled up, CH634W6G does this\n"
 		(exclude_from_sim no)
-		(at 118.11 379.095 0)
+		(at 66.04 274.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0ea3f7cc-9be4-496d-86ee-0a98e375fb29")
+	)
+	(text "Current limit=Resistor on Flag#/Resistor on ISet\n= 60k/30k\n= 2A\n\nGlobal overcurrent limit for the 4 usb is 4A\nthe usb spec says that a device should draw no more then .9A\n\n"
+		(exclude_from_sim no)
+		(at 128.27 232.41 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2445,7 +2342,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.065 405.765) (xy 145.415 405.765)
+			(xy 105.41 259.08) (xy 111.76 259.08)
 		)
 		(stroke
 			(width 0)
@@ -2455,7 +2352,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.345 405.765) (xy 98.425 405.765)
+			(xy 59.69 259.08) (xy 64.77 259.08)
 		)
 		(stroke
 			(width 0)
@@ -2465,17 +2362,57 @@
 	)
 	(wire
 		(pts
-			(xy 89.535 408.305) (xy 98.425 408.305)
+			(xy 181.61 260.35) (xy 187.96 260.35)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "72b374cd-884d-4998-b0e0-a80453250ebc")
+		(uuid "26bd1487-4c5e-49cc-9d13-9fef75f48b92")
 	)
 	(wire
 		(pts
-			(xy 139.065 110.49) (xy 139.065 112.395)
+			(xy 74.93 148.59) (xy 78.74 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "286b382a-51bf-4a0d-a924-83882f31fa39")
+	)
+	(wire
+		(pts
+			(xy 167.64 163.83) (xy 162.56 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40c4aab3-d0da-466d-9236-ac57797711b7")
+	)
+	(wire
+		(pts
+			(xy 190.5 262.89) (xy 181.61 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42345565-b251-4d87-847c-40bef8059070")
+	)
+	(wire
+		(pts
+			(xy 58.42 261.62) (xy 64.77 261.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f00cfe0-f86a-469a-904c-f6e12a30dd35")
+	)
+	(wire
+		(pts
+			(xy 139.7 105.41) (xy 139.7 113.03)
 		)
 		(stroke
 			(width 0)
@@ -2485,17 +2422,7 @@
 	)
 	(wire
 		(pts
-			(xy 89.535 407.67) (xy 89.535 408.305)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b15cfd3-5b7a-4f8f-8d8c-428b4e42dfaa")
-	)
-	(wire
-		(pts
-			(xy 141.605 403.225) (xy 139.065 403.225)
+			(xy 107.95 256.54) (xy 105.41 256.54)
 		)
 		(stroke
 			(width 0)
@@ -2505,7 +2432,27 @@
 	)
 	(wire
 		(pts
-			(xy 136.525 110.49) (xy 136.525 112.395)
+			(xy 139.7 257.81) (xy 140.97 257.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96226fba-ead6-4688-91e2-7e784865b746")
+	)
+	(wire
+		(pts
+			(xy 134.62 262.89) (xy 140.97 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1f536b8-e177-4e54-a655-863edb189d87")
+	)
+	(wire
+		(pts
+			(xy 137.16 105.41) (xy 137.16 113.03)
 		)
 		(stroke
 			(width 0)
@@ -2515,7 +2462,17 @@
 	)
 	(wire
 		(pts
-			(xy 97.155 403.225) (xy 98.425 403.225)
+			(xy 134.62 105.41) (xy 134.62 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da5704dc-c5c0-4ca2-94a7-0a7fccea16e1")
+	)
+	(wire
+		(pts
+			(xy 63.5 256.54) (xy 64.77 256.54)
 		)
 		(stroke
 			(width 0)
@@ -2525,7 +2482,17 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 408.305) (xy 139.065 408.305)
+			(xy 184.15 257.81) (xy 181.61 257.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef5a6d0a-b07e-473d-b021-165504e9a7d6")
+	)
+	(wire
+		(pts
+			(xy 114.3 261.62) (xy 105.41 261.62)
 		)
 		(stroke
 			(width 0)
@@ -2533,8 +2500,38 @@
 		)
 		(uuid "f3062daf-2453-42c0-a14f-eaf32fc90ebe")
 	)
+	(wire
+		(pts
+			(xy 135.89 260.35) (xy 140.97 260.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f40351db-2e64-4047-bb3b-60efc6c27bb8")
+	)
+	(wire
+		(pts
+			(xy 162.56 166.37) (xy 167.64 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fabf4cd4-d025-4922-aa3b-d74077d16ddb")
+	)
 	(label "PWRSTOP"
-		(at 93.345 408.305 0)
+		(at 134.62 262.89 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1a7bea66-74f6-4c22-bd5c-f61ec05b73fa")
+	)
+	(label "PWRSTOP"
+		(at 58.42 261.62 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2543,39 +2540,89 @@
 		)
 		(uuid "49580993-638e-4f46-a62d-6a63ad1ab79f")
 	)
-	(label "PWRSTART"
-		(at 145.415 408.305 0)
+	(label "VDD33"
+		(at 167.64 163.83 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
+		)
+		(uuid "5eaa940a-3c40-4b0e-a4ee-9f76b9167794")
+	)
+	(label "PWRSTART"
+		(at 114.3 261.62 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
 		)
 		(uuid "77fac8ae-ceac-4385-be4e-7faadb2319dd")
 	)
 	(label "PWRSTOP"
-		(at 139.065 110.49 90)
+		(at 139.7 105.41 270)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "8fbf63b3-5975-454c-991f-4e6458276e05")
 	)
 	(label "PWRSTART"
-		(at 136.525 110.49 90)
+		(at 137.16 105.41 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9c3fc101-4af9-4eaf-828f-c01e51f75d89")
+	)
+	(label "PWRSTART"
+		(at 190.5 262.89 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a1da6abf-ff58-4bc0-a520-9bf9b66744b9")
+	)
+	(label "VDD33"
+		(at 74.93 148.59 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "9c3fc101-4af9-4eaf-828f-c01e51f75d89")
+		(uuid "ab84abcd-6e14-4fd6-a69c-e473691d956d")
+	)
+	(label "VDD33"
+		(at 134.62 105.41 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ce4a4f05-e13e-4957-b28f-ff5e1ab641fc")
+	)
+	(label "VDD5"
+		(at 167.64 166.37 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d2c21ee3-9677-4e2b-80f7-19b404e8d9e7")
 	)
 	(symbol
 		(lib_id "CHXXX:CH211D (Altium Display 1)")
-		(at 376.555 123.19 0)
+		(at 321.31 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2584,7 +2631,7 @@
 		(fields_autoplaced yes)
 		(uuid "07a01dc2-f494-4922-b1fc-0559e554ad78")
 		(property "Reference" "U3"
-			(at 413.385 125.0248 0)
+			(at 358.14 145.3448 0)
 			(effects
 				(font
 					(size 1.8288 1.8288)
@@ -2592,7 +2639,7 @@
 			)
 		)
 		(property "Value" "CH211D"
-			(at 413.385 128.8348 0)
+			(at 358.14 149.1548 0)
 			(effects
 				(font
 					(size 1.8288 1.8288)
@@ -2600,7 +2647,7 @@
 			)
 		)
 		(property "Footprint" "CHXXX:QFN20_3X3"
-			(at 376.555 123.19 0)
+			(at 321.31 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2609,7 +2656,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 376.555 123.19 0)
+			(at 321.31 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2618,7 +2665,7 @@
 			)
 		)
 		(property "Description" "28V USB PD & Type-C high voltage interface"
-			(at 376.555 123.19 0)
+			(at 321.31 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2700,15 +2747,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 93.345 405.765 180)
+		(at 187.96 250.19 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "2497f32c-1f39-41fa-a46e-444b83c5eeb9")
-		(property "Reference" "#PWR03"
-			(at 93.345 399.415 0)
+		(uuid "170e5c25-34c7-4e22-a410-e1be8b1e37c2")
+		(property "Reference" "#PWR08"
+			(at 187.96 243.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2717,7 +2764,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.36 401.955 0)
+			(at 180.975 246.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2725,7 +2772,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 93.345 405.765 0)
+			(at 187.96 250.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2734,7 +2781,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 93.345 405.765 0)
+			(at 187.96 250.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2743,7 +2790,139 @@
 			)
 		)
 		(property "Description" ""
-			(at 93.345 405.765 0)
+			(at 187.96 250.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5fd7537f-f58a-4d16-aca0-63b8848f3140")
+		)
+		(instances
+			(project "CH634W6G hub"
+				(path "/df683336-86ec-465f-991a-1594487590d7"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 184.15 257.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1b74e512-4c81-403f-9252-ae05571527a9")
+		(property "Reference" "#PWR07"
+			(at 184.15 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 184.15 253.365 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.15 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.15 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 184.15 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6b508dac-4897-4d36-8c1e-cb09ab8d4412")
+		)
+		(instances
+			(project "CH634W6G hub"
+				(path "/df683336-86ec-465f-991a-1594487590d7"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 59.69 259.08 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2497f32c-1f39-41fa-a46e-444b83c5eeb9")
+		(property "Reference" "#PWR03"
+			(at 59.69 252.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 52.705 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 259.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2765,7 +2944,7 @@
 	)
 	(symbol
 		(lib_id "power:VBUS")
-		(at 97.155 403.225 0)
+		(at 63.5 256.54 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2774,7 +2953,7 @@
 		(fields_autoplaced yes)
 		(uuid "42c27c74-c6cb-44e8-a62a-9a9310ac0286")
 		(property "Reference" "#PWR02"
-			(at 97.155 407.035 0)
+			(at 63.5 260.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2783,7 +2962,7 @@
 			)
 		)
 		(property "Value" "VBUS"
-			(at 97.155 398.78 0)
+			(at 63.5 252.095 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2791,7 +2970,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 97.155 403.225 0)
+			(at 63.5 256.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2800,7 +2979,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 97.155 403.225 0)
+			(at 63.5 256.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2809,7 +2988,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 97.155 403.225 0)
+			(at 63.5 256.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2831,7 +3010,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 145.415 395.605 180)
+		(at 111.76 248.92 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2839,7 +3018,7 @@
 		(dnp no)
 		(uuid "42d8730d-73d2-4c78-8022-a54c5978b424")
 		(property "Reference" "#PWR05"
-			(at 145.415 389.255 0)
+			(at 111.76 242.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2848,7 +3027,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 138.43 391.795 0)
+			(at 104.775 245.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2856,7 +3035,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 145.415 395.605 0)
+			(at 111.76 248.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2865,7 +3044,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 145.415 395.605 0)
+			(at 111.76 248.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2874,7 +3053,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 145.415 395.605 0)
+			(at 111.76 248.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2896,7 +3075,7 @@
 	)
 	(symbol
 		(lib_id "CHXXX:CH634W6G")
-		(at 85.725 120.015 0)
+		(at 86.36 120.65 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2905,7 +3084,7 @@
 		(fields_autoplaced yes)
 		(uuid "5a17c643-7f3f-4291-802f-fe0cbfceb7d6")
 		(property "Reference" "U1"
-			(at 163.195 126.9298 0)
+			(at 163.83 127.5648 0)
 			(effects
 				(font
 					(size 1.8288 1.8288)
@@ -2913,7 +3092,7 @@
 			)
 		)
 		(property "Value" "CH634W6G"
-			(at 163.195 130.7398 0)
+			(at 163.83 131.3748 0)
 			(effects
 				(font
 					(size 1.8288 1.8288)
@@ -2921,7 +3100,7 @@
 			)
 		)
 		(property "Footprint" "CHXXX:QFN64_8X8"
-			(at 85.725 120.015 0)
+			(at 86.36 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2930,7 +3109,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 85.725 120.015 0)
+			(at 86.36 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2939,7 +3118,7 @@
 			)
 		)
 		(property "Description" "4 ports USB 3.0 SS hub"
-			(at 85.725 120.015 0)
+			(at 86.36 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3152,17 +3331,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 89.535 397.51 0)
+		(lib_id "power:GND")
+		(at 139.7 196.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "854903a4-a50b-4328-a572-2f86a41f981c")
-		(property "Reference" "#PWR04"
-			(at 89.535 401.32 0)
+		(uuid "69d9c7f7-9e59-476b-bbe0-067c5536d82b")
+		(property "Reference" "#PWR010"
+			(at 139.7 203.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3170,8 +3349,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 89.535 392.43 0)
+		(property "Value" "GND"
+			(at 139.7 201.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3179,7 +3358,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 89.535 397.51 0)
+			(at 139.7 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3188,7 +3367,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 89.535 397.51 0)
+			(at 139.7 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3197,7 +3376,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 89.535 397.51 0)
+			(at 139.7 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3206,29 +3385,29 @@
 			)
 		)
 		(pin "1"
-			(uuid "0da8eda0-737d-4db0-9ab4-b99ccd091339")
+			(uuid "516f002a-6fff-4e3a-b354-6a7f35b66f63")
 		)
 		(instances
-			(project ""
+			(project "CH634W6G hub"
 				(path "/df683336-86ec-465f-991a-1594487590d7"
-					(reference "#PWR04")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 141.605 403.225 0)
+		(lib_id "power:GND")
+		(at 162.56 171.45 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "891dadef-472b-43b3-9441-ca2fb77454c3")
-		(property "Reference" "#PWR01"
-			(at 141.605 407.035 0)
+		(uuid "6c14c06d-0cc3-41d9-9eb7-e37920269d6d")
+		(property "Reference" "#PWR09"
+			(at 168.91 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3236,16 +3415,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
-			(at 141.605 398.78 0)
+		(property "Value" "GND"
+			(at 166.878 171.4499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 141.605 403.225 0)
+			(at 162.56 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3254,7 +3434,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 141.605 403.225 0)
+			(at 162.56 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3263,7 +3443,73 @@
 			)
 		)
 		(property "Description" ""
-			(at 141.605 403.225 0)
+			(at 162.56 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d27f3e0a-6737-46ef-89f3-6834a5361809")
+		)
+		(instances
+			(project ""
+				(path "/df683336-86ec-465f-991a-1594487590d7"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 107.95 256.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "891dadef-472b-43b3-9441-ca2fb77454c3")
+		(property "Reference" "#PWR01"
+			(at 107.95 260.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 107.95 252.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 107.95 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 107.95 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 107.95 256.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3284,8 +3530,154 @@
 		)
 	)
 	(symbol
+		(lib_id "CHXXX:CH217K")
+		(at 148.59 250.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8c385871-8261-4460-850e-7309632dfdcb")
+		(property "Reference" "U4"
+			(at 161.29 243.205 0)
+			(effects
+				(font
+					(size 1.8288 1.8288)
+				)
+			)
+		)
+		(property "Value" "*"
+			(at 161.29 247.015 0)
+			(effects
+				(font
+					(size 1.8288 1.8288)
+				)
+			)
+		)
+		(property "Footprint" "CHXXX:SOT-23-6"
+			(at 148.59 250.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 250.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Current-Limited USB Power Distribution Switch"
+			(at 148.59 250.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2fe38001-b67b-444e-b043-e6381edf03ff")
+		)
+		(pin "5"
+			(uuid "77784077-279a-4c36-bafa-bedd4c81d127")
+		)
+		(pin "3"
+			(uuid "ec594462-e50c-466b-8582-b089e4203984")
+		)
+		(pin "2"
+			(uuid "307b539b-95e9-4cbf-a080-a1367643f62f")
+		)
+		(pin "4"
+			(uuid "177c110f-3b21-49c6-9160-e7fa295e2db1")
+		)
+		(pin "6"
+			(uuid "9a34e23a-d1e4-4535-8015-0f9a02666823")
+		)
+		(instances
+			(project "CH634W6G hub"
+				(path "/df683336-86ec-465f-991a-1594487590d7"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 135.89 260.35 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "937fe6d7-e813-4208-aac4-ca17842d4f00")
+		(property "Reference" "#PWR04"
+			(at 135.89 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 128.905 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 260.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 260.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 260.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "22376779-6c69-4e6c-afe4-2724bf2c75c7")
+		)
+		(instances
+			(project "CH634W6G hub"
+				(path "/df683336-86ec-465f-991a-1594487590d7"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "fab:R_0603")
-		(at 145.415 400.685 0)
+		(at 111.76 254 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3294,7 +3686,7 @@
 		(fields_autoplaced yes)
 		(uuid "9bd52d27-b2e9-43c5-a76b-6afd8cd94426")
 		(property "Reference" "R1"
-			(at 147.32 399.4149 0)
+			(at 114.3 252.7299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3302,8 +3694,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "24k"
-			(at 147.32 401.9549 0)
+		(property "Value" "30k"
+			(at 114.3 255.2699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3312,7 +3704,7 @@
 			)
 		)
 		(property "Footprint" "CHXXX:0603"
-			(at 145.415 400.685 90)
+			(at 111.76 254 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3321,7 +3713,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 145.415 400.685 0)
+			(at 111.76 254 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3330,7 +3722,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 145.415 400.685 0)
+			(at 111.76 254 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3354,34 +3746,101 @@
 		)
 	)
 	(symbol
-		(lib_id "fab:R_0603")
-		(at 89.535 402.59 180)
+		(lib_id "power:GND")
+		(at 93.98 196.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a9e56168-db74-432b-9975-5995386eef14")
-		(property "Reference" "R2"
-			(at 92.075 401.3199 0)
+		(fields_autoplaced yes)
+		(uuid "a09fab14-5373-42ec-8a33-0126adbdd166")
+		(property "Reference" "#PWR011"
+			(at 93.98 203.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(hide yes)
 			)
 		)
-		(property "Value" "51k"
-			(at 84.455 404.495 0)
+		(property "Value" "GND"
+			(at 93.98 201.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.98 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2d72347c-86c9-4b5b-b06c-6b6e843d2ff4")
+		)
+		(instances
+			(project "CH634W6G hub"
+				(path "/df683336-86ec-465f-991a-1594487590d7"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "fab:R_0603")
+		(at 187.96 255.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c5e9f21b-1521-44bf-8d08-87f87eb4e47b")
+		(property "Reference" "R2"
+			(at 190.5 253.9999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "30k"
+			(at 190.5 256.5399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "CHXXX:0603"
-			(at 89.535 402.59 90)
+			(at 187.96 255.27 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3390,7 +3849,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 89.535 402.59 0)
+			(at 187.96 255.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3399,7 +3858,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 89.535 402.59 0)
+			(at 187.96 255.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3408,10 +3867,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "826b1cdf-b92a-4814-9974-df9e010c2cac")
+			(uuid "b098396a-1ee5-425a-aaf6-13bdf94d9060")
 		)
 		(pin "1"
-			(uuid "24e7eb22-ec74-4628-b007-6b246dcaefe6")
+			(uuid "af53afed-87b3-4f9c-9162-cc31081663dd")
 		)
 		(instances
 			(project "CH634W6G hub"
@@ -3423,33 +3882,34 @@
 		)
 	)
 	(symbol
-		(lib_id "CHXXX:CH217K")
-		(at 106.045 395.605 0)
+		(lib_id "power:VBUS")
+		(at 139.7 257.81 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "f1cc18cc-6ab8-4fbb-8693-e16b5b71f328")
-		(property "Reference" "U2"
-			(at 118.745 388.62 0)
+		(uuid "e530f809-eeac-4805-965e-86ab9835626a")
+		(property "Reference" "#PWR06"
+			(at 139.7 261.62 0)
 			(effects
 				(font
-					(size 1.8288 1.8288)
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VBUS"
+			(at 139.7 253.365 0)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "*"
-			(at 118.745 392.43 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-			)
-		)
-		(property "Footprint" "CHXXX:SOT-23-6"
-			(at 106.045 395.605 0)
+		(property "Footprint" ""
+			(at 139.7 257.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3458,7 +3918,72 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 106.045 395.605 0)
+			(at 139.7 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "db054fe3-a1ef-43a5-ad25-7896e8fcac1f")
+		)
+		(instances
+			(project "CH634W6G hub"
+				(path "/df683336-86ec-465f-991a-1594487590d7"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "CHXXX:CH217K")
+		(at 72.39 248.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f1cc18cc-6ab8-4fbb-8693-e16b5b71f328")
+		(property "Reference" "U2"
+			(at 85.09 241.935 0)
+			(effects
+				(font
+					(size 1.8288 1.8288)
+				)
+			)
+		)
+		(property "Value" "*"
+			(at 85.09 245.745 0)
+			(effects
+				(font
+					(size 1.8288 1.8288)
+				)
+			)
+		)
+		(property "Footprint" "CHXXX:SOT-23-6"
+			(at 72.39 248.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 72.39 248.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3467,7 +3992,7 @@
 			)
 		)
 		(property "Description" "Current-Limited USB Power Distribution Switch"
-			(at 106.045 395.605 0)
+			(at 72.39 248.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)

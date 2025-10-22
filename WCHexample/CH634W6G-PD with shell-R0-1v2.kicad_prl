@@ -119,32 +119,7 @@
   },
   "open_jobsets": [],
   "project": {
-    "files": [
-      {
-        "name": "CH634W6G-PD with shell-R0-1v2.kicad_pcb",
-        "open": false,
-        "window": {
-          "display": 0,
-          "maximized": true,
-          "pos_x": -12,
-          "pos_y": -12,
-          "size_x": 2584,
-          "size_y": 1624
-        }
-      },
-      {
-        "name": "CH634W6G-PD with shell-R0-1v2.kicad_sch",
-        "open": true,
-        "window": {
-          "display": 0,
-          "maximized": true,
-          "pos_x": -12,
-          "pos_y": -12,
-          "size_x": 2584,
-          "size_y": 1624
-        }
-      }
-    ]
+    "files": []
   },
   "schematic": {
     "selection_filter": {
