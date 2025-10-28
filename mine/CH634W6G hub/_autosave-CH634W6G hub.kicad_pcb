@@ -172,7 +172,7 @@
 	(footprint "CHXXX:0603"
 		(layer "F.Cu")
 		(uuid "1f1957ec-30cf-403e-affa-7aacd4b7c1a8")
-		(at 109.211 71.81)
+		(at 112.98 78.07)
 		(property "Reference" "R2"
 			(at 0.77 -1.59 0)
 			(layer "F.SilkS")
@@ -304,7 +304,7 @@
 	(footprint "CHXXX:QFN20_3X3"
 		(layer "F.Cu")
 		(uuid "663aae44-6688-4a95-9fa1-e81b76e0afe2")
-		(at 119.3238 73.45)
+		(at 123.0928 79.71)
 		(property "Reference" "U3"
 			(at 0 -2.5512 0)
 			(layer "F.SilkS")
@@ -725,7 +725,7 @@
 	(footprint "CHXXX:0603"
 		(layer "F.Cu")
 		(uuid "ab567049-7d4c-4e9b-bb2d-885f7b6e5655")
-		(at 109.211 69.03)
+		(at 112.98 75.29)
 		(property "Reference" "R1"
 			(at 0.77 -1.59 0)
 			(layer "F.SilkS")
@@ -857,7 +857,7 @@
 	(footprint "CHXXX:QFN64_8X8"
 		(layer "F.Cu")
 		(uuid "c955a231-19b2-4a91-a2da-ed392ae4b659")
-		(at 101.375 73.63)
+		(at 105.144 79.89)
 		(property "Reference" "U1"
 			(at 0 -5.1 0)
 			(layer "F.SilkS")
@@ -1729,7 +1729,7 @@
 	(footprint "CHXXX:SOT-23-6"
 		(layer "F.Cu")
 		(uuid "f0ff0019-0950-4c29-a673-8f31b406cd19")
-		(at 114.6385 82.383)
+		(at 118.4075 88.643)
 		(descr "SOT-23-6")
 		(property "Reference" "U2"
 			(at 0.7615 -3.62 0)
